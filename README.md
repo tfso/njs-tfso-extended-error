@@ -2,14 +2,14 @@
 `ExtendedError` makes it easier to create `Error` with custom properties
 
 ## installation
-```
+```console
 npm install @tfso/extended-error
 ```
 
 ## Usage
 
-```
-const ExtendedError = require('extended-error')
+```javascript
+const ExtendedError = require('@tfso/extended-error')
 
 let error = new ExtendedError('Not found', {status:404})
 
@@ -21,11 +21,11 @@ console.log(error.stack)                        // 'Error: Not found\n    at rep
 ```
 
 This:
-```
+```javascript
 throw new ExtendedError('Not found', {status:404})
 ```
 is equivalent to:
-```
+```javascript
 let error = new Error('Not found')
 error.status = 400
 throw error
