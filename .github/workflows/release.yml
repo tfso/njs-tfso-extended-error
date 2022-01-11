@@ -1,0 +1,58 @@
+on:
+  release:
+    types: [created]
+
+name: release
+
+jobs:
+  build:
+    name: create release
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: setup
+        uses: actions/setup-node@v2
+        with:
+          node-version: 12        
+      - name: build project
+        run: |
+          npm ci
+          npm run build
+          npm test
+        env:
+          CI: true
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NPM_TFSO_TOKEN: ${{secrets.NPM_TFSO_TOKEN}}
+      - name: upload artifact
+        uses: actions/upload-artifact@v2.3.1
+        with:
+          name: artifact
+          path: | 
+            index.js
+            package.json
+            README.md
+
+  publish-github:
+    name: publish npm to github
+    if: "!github.event.release.prerelease" # https://developer.github.com/v3/activity/events/types/#releaseevent
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write    
+    steps:
+      - name: download artifact
+        uses: actions/download-artifact@v2.1.0
+        with:
+          name: artifact
+      - name: setup
+        uses: actions/setup-node@v2
+        with:
+          node-version: 12
+          registry-url: https://npm.pkg.github.com/
+      - name: publish
+        run: |
+          npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
