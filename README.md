@@ -1,10 +1,25 @@
-# extended-error
+# @tfso/extended-error
 `ExtendedError` makes it easier to create `Error` with custom properties
 
-## installation
-```console
-npm install @tfso/extended-error
+## Installation
+Install from the command line:
 ```
+$ npm install @tfso/extended-error@1.0.0 --save
+```
+
+Install via package.json:
+```
+"@tfso/extended-error": "1.0.0"
+```
+
+## Contribution
+### CI/CD
+This package is build and auto version using [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/).
+
+Example **commit message**:
+* `fix: <a message>` creates a patch `1.2.1` -> `1.2.2`
+* `feat: <a message>` creates en minor `1.2.1` -> `1.3.0`
+* `BREAKING CHANGE <a message>` creates a major  `1.2.1` -> `2.0.0`
 
 ## Usage
 
