@@ -1,3 +1,10 @@
+### [1.1.2](https://github.com/tfso/njs-tfso-extended-error/compare/v1.1.1...v1.1.2) (2022-01-12)
+
+
+### Bug Fixes
+
+* restarted renovate config ([8f5a842](https://github.com/tfso/njs-tfso-extended-error/commit/8f5a8420542c22a4510b6bcfcd392029fd6a16d3))
+
 ### [1.1.1](https://github.com/tfso/njs-tfso-extended-error/compare/v1.1.0...v1.1.1) (2022-01-11)
 
 
