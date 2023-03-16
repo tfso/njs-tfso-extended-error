@@ -43,7 +43,7 @@ jobs:
 
     steps:
       - name: Download Build Artifact
-        uses: actions/download-artifact@v2.1.0
+        uses: actions/download-artifact@v2.1.1
 
       - uses: actions/setup-node@v2
         with:
@@ -93,7 +93,7 @@ jobs:
         run: exit 1
 
       - name: Download Build Artifact
-        uses: actions/download-artifact@v2.1.0
+        uses: actions/download-artifact@v2.1.1
 
       - name: Copy package.json to artifact
         run: mkdir -p artifact && cp package.json ./artifact/package.json
@@ -112,7 +112,7 @@ jobs:
 
     steps:
       - name: Download Build Artifact
-        uses: actions/download-artifact@v2.1.0
+        uses: actions/download-artifact@v2.1.1
 
       - uses: actions/setup-node@v2
         with:
