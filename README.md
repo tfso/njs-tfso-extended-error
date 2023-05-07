@@ -21,6 +21,7 @@ Example **commit message**:
 * `feat: <a message>` creates en minor `1.2.1` -> `1.3.0`
 * `BREAKING CHANGE <a message>` creates a major  `1.2.1` -> `2.0.0`
 
+
 ## Usage
 
 ### Javascript import
