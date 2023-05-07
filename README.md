@@ -21,7 +21,6 @@ Example **commit message**:
 * `feat: <a message>` creates en minor `1.2.1` -> `1.3.0`
 * `BREAKING CHANGE <a message>` creates a major  `1.2.1` -> `2.0.0`
 
-
 ## Usage
 
 ### Javascript import
@@ -40,7 +39,7 @@ import { ExtendedError } from '@tfso/extended-error' //  access the class itself
 
 ### Create an error
 ```javascript
-const ExtendedError = require('@tfso/extended-error') 
+const ExtendedError = require('@tfso/extended-error')
 
 let error = new ExtendedError('Not found', {status:404})
 
