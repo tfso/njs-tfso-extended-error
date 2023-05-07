@@ -21,10 +21,26 @@ Example **commit message**:
 * `feat: <a message>` creates en minor `1.2.1` -> `1.3.0`
 * `BREAKING CHANGE <a message>` creates a major  `1.2.1` -> `2.0.0`
 
+
 ## Usage
 
+### Javascript import
 ```javascript
-const ExtendedError = require('@tfso/extended-error')
+const ExtendedError = require('@tfso/extended-error') //  as a JavaScript package
+// or
+const { ExtendedError } = require('@tfso/extended-error') //  access the class itself
+```
+
+###  TypeScript import
+```typescript
+import ExtendedError from '@tfso/extended-error' //  as a TypeScript package
+// or
+import { ExtendedError } from '@tfso/extended-error' //  access the class itself
+```
+
+### Create an error
+```javascript
+const ExtendedError = require('@tfso/extended-error') 
 
 let error = new ExtendedError('Not found', {status:404})
 
