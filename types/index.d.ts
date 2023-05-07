@@ -1,5 +1,3 @@
-declare class ExtendedError{
+export default class ExtendedError extends Error{
     constructor(message: string, content?:object)
 }
-
-export default ExtendedError

@@ -23,6 +23,21 @@ Example **commit message**:
 
 ## Usage
 
+### Javascript import
+```javascript
+const ExtendedError = require('@tfso/extended-error') //  as a JavaScript package
+// or
+const { ExtendedError } = require('@tfso/extended-error') //  access the class itself
+```
+
+###  TypeScript import
+```typescript
+import ExtendedError from '@tfso/extended-error' //  as a TypeScript package
+// or
+import { ExtendedError } from '@tfso/extended-error' //  access the class itself
+```
+
+### Create an error
 ```javascript
 const ExtendedError = require('@tfso/extended-error')
 

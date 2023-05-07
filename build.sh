@@ -9,7 +9,7 @@ fi
 
 rm -rf ./dist/*
 
-cp -r ./src ./dist/
 cp README.md ./dist/
 cp package.json ./dist/
 cp index.js ./dist/
+cp types/*.d.ts ./dist/
