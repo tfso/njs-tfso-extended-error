@@ -1,3 +1,10 @@
+## [1.2.0](https://github.com/tfso/njs-tfso-extended-error/compare/v1.1.2...v1.2.0) (2023-05-07)
+
+
+### Features
+
+* triggger tagging ([272c15d](https://github.com/tfso/njs-tfso-extended-error/commit/272c15dac7818e847cbfa0387a5820cb67c4149b))
+
 ### [1.1.2](https://github.com/tfso/njs-tfso-extended-error/compare/v1.1.1...v1.1.2) (2022-01-12)
 
 
