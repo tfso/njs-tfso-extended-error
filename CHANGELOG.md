@@ -1,3 +1,10 @@
+### [1.2.1](https://github.com/tfso/njs-tfso-extended-error/compare/v1.2.0...v1.2.1) (2023-05-19)
+
+
+### Bug Fixes
+
+* readded renovate ([7990003](https://github.com/tfso/njs-tfso-extended-error/commit/7990003735325124d40705d4bb56c3441f3b6b99))
+
 ## [1.2.0](https://github.com/tfso/njs-tfso-extended-error/compare/v1.1.2...v1.2.0) (2023-05-07)
 
 
