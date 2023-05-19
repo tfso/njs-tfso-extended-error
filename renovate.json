@@ -1,5 +1,5 @@
 {
   "extends": [
-    "github>tfso/renovate-config"
+    "github>tfso/renovate-config:erp-be"
   ]
 }
