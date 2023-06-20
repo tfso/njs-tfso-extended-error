@@ -15,7 +15,7 @@
     "error"
   ],
   "devDependencies": {
-    "conventional-changelog-conventionalcommits": "4.6.3"
+    "conventional-changelog-conventionalcommits": "6.1.0"
   },
   "author": "24SevenOffice",
   "license": "ISC",
