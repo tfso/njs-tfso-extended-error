@@ -83,7 +83,7 @@ jobs:
       # Creates tags and updates changelog based on change changelog-config.js settings
       - name: Conventional Changelog Action
         id: changelog
-        uses: TriPSs/conventional-changelog-action@v3
+        uses: TriPSs/conventional-changelog-action@v4
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           config-file-path: ./changelog-config.js
