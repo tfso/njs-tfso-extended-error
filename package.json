@@ -4,8 +4,11 @@
   "description": "An Extended Error class that support custom properties",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\"",
-    "build": "bash ./build.sh"
+    "clean": "rm -rf package-lock.json node_modules",
+    "test": "npm run mocha",
+    "mocha": "mocha --exit --recursive --timeout 10000 ./test/**/*.test.js",
+    "build": "bash ./build.sh",
+    "cover": "nyc --reporter=html --reporter=text npm run mocha"
   },
   "repository": {
     "type": "git",
@@ -15,7 +18,10 @@
     "error"
   ],
   "devDependencies": {
-    "conventional-changelog-conventionalcommits": "4.6.3"
+    "chai": "^4.3.10",
+    "conventional-changelog-conventionalcommits": "4.6.3",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0"
   },
   "author": "24SevenOffice",
   "license": "ISC",
