@@ -15,3 +15,4 @@ class ExtendedError extends Error {
 
 module.exports = ExtendedError
 module.exports.default = ExtendedError
+module.exports.ExtendedError = ExtendedError
