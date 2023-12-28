@@ -1,3 +1,10 @@
 {
-    "extends": ["github>tfso/renovate-config:erp-be"]
+    "extends": ["github>tfso/renovate-config:erp-be"],
+    "packageRules": [
+        {
+            "packageNames": ["chai"],
+            "updateTypes": ["minor", "patch"],
+            "allowedVersions": ["<5"]
+        }
+    ]
 }

@@ -36,10 +36,10 @@ import { ExtendedError } from '@tfso/extended-error' //  access the class itself
 
 ### Create an error
 
-```javascript
-const ExtendedError = require('@tfso/extended-error')
+```typescript
+import { ExtendedError } from '@tfso/extended-error'
 
-let error = new ExtendedError('Not found', { status: 404 })
+const error = new ExtendedError('Not found', { status: 404 })
 
 console.log(error.message) // Not found
 console.log(error.status) // 404
@@ -56,9 +56,9 @@ throw new ExtendedError('Not found', { status: 404 })
 
 is equivalent to:
 
-```javascript
-let error = new Error('Not found')
-error.status = 400
+```typescript
+const error = new Error('Not found')
+error.status = 404
 throw error
 ```
 

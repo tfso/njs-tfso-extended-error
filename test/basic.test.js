@@ -1,7 +1,7 @@
 const chai = require('chai')
-const ExtendedError = require('../index.js')
+const ExtendedError = require('../dist')
 
-describe('Basic Importing', () => {
+describe('Basic require from the old days', () => {
     it('should import ExtendedError', () => {
         const app = new ExtendedError({})
         chai.expect(app).to.be.an('Error')
