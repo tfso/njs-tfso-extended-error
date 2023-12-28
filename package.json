@@ -4,8 +4,16 @@
   "description": "An Extended Error class that support custom properties",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\"",
-    "build": "bash ./build.sh"
+    "clean": "rm -rf package-lock.json node_modules",
+    "test": "npm run mocha",
+    "mocha": "mocha --exit --recursive --timeout 10000 ./test/**/*.test.js",
+    "lint": "npx eslint test *.js",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier": "npx prettier . --check",
+    "prettier:fix": "npm run prettier -- --write",
+    "format": "npm run prettier:fix && npm run lint:fix",
+    "build": "bash ./build.sh",
+    "cover": "nyc --reporter=html --reporter=text npm run mocha"
   },
   "repository": {
     "type": "git",
@@ -15,7 +23,15 @@
     "error"
   ],
   "devDependencies": {
-    "conventional-changelog-conventionalcommits": "4.6.3"
+    "@tfso/eslint-config": "^1.1.4",
+    "auto-changelog": "^2.4.0",
+    "chai": "^4.3.10",
+    "conventional-changelog-conventionalcommits": "4.6.3",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
+    "prettier": "^3.1.1"
   },
   "author": "24SevenOffice",
   "license": "ISC",
@@ -26,5 +42,12 @@
     "access": "public"
   },
   "homepage": "https://github.com/tfso/njs-tfso-extended-error#readme",
-  "types": "./types/index.d.ts"
+  "types": "./types/index.d.ts",
+  "auto-changelog": {
+    "issueUrl": "https://24so.atlassian.net/browse/{id}",
+    "issuePattern": "[A-Z]+-\\d+",
+    "unreleased": true,
+    "commitLimit": false,
+    "ignoreCommitPattern": "^(Update package.json|skip|Skip).*"
+  }
 }
